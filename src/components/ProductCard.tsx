@@ -8,7 +8,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ children, className = "" }: ProductCardProps) => {
   return (
-    <div className={`bg-yellow-50 rounded-3xl p-6 shadow-lg ${className}`}>
+    <div className={`bg-transparent rounded-3xl p-4 ${className}`}>
       {children}
     </div>
   );
