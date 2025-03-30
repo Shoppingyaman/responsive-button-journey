@@ -1,7 +1,7 @@
 
 import ActionButton from "@/components/ActionButton";
 import ProductCard from "@/components/ProductCard";
-import { Download, Spotify, Youtube } from "lucide-react";
+import { Download, Music, Youtube } from "lucide-react";
 
 const Index = () => {
   return (
@@ -60,7 +60,7 @@ const Index = () => {
             {/* Spotify Button */}
             <ActionButton
               variant="spotify"
-              icon={<Spotify />}
+              icon={<Music />}
               className="w-full"
             >
               Spotify
