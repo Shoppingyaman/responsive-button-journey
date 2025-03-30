@@ -1,3 +1,4 @@
+
 import ActionButton from "@/components/ActionButton";
 import ProductCard from "@/components/ProductCard";
 import { Download, Music, Youtube } from "lucide-react";
@@ -38,8 +39,8 @@ const Index = () => {
             {/* Spotify Button */}
             <CustomButton imgSrc="/lovable-uploads/c2bb940b-045b-49f3-af8c-cdaf833c19a3.png" alt="Spotify" href="#" />
             
-            {/* YouTube Button */}
-            <CustomButton imgSrc="/lovable-uploads/8920b97a-686c-40d8-a2b8-4fb4e6f23be9.png" alt="YouTube" href="#" />
+            {/* YouTube Button - Updated with new image */}
+            <CustomButton imgSrc="/lovable-uploads/bc4d241b-1e8a-4f22-99a7-9a4da38dd8f7.png" alt="YouTube" href="#" />
           </div>
         </div>
       </div>
