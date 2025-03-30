@@ -17,18 +17,8 @@ const Index = () => {
 
       {/* Content Container */}
       <div className="flex-1 flex flex-col md:flex-row items-center justify-center p-6 md:p-12 gap-8 max-w-7xl mx-auto w-full z-10">
-        {/* Tea Package Image */}
-        <div className="flex-1 flex justify-center items-center">
-          <img
-            src="/lovable-uploads/9a3c665d-5c2e-4f8c-8414-605fe9bf5709.png"
-            alt="Kotagala Tea Package"
-            className="w-full max-w-md object-contain"
-            style={{ maxHeight: "70vh" }}
-          />
-        </div>
-
-        {/* Right Side Content */}
-        <div className="flex-1 flex flex-col gap-6 items-center md:items-start">
+        {/* Right Side Content - Moved from bottom to top for mobile */}
+        <div className="flex-1 flex flex-col gap-6 items-center md:items-start order-1 md:order-2">
           {/* Product Info Card */}
           <ProductCard className="w-full max-w-md">
             <div className="text-center">
@@ -63,13 +53,24 @@ const Index = () => {
               href="#"
             />
             
-            {/* YouTube Button */}
+            {/* YouTube Button - Moved to the top of the buttons list */}
             <CustomButton 
               imgSrc="/lovable-uploads/8920b97a-686c-40d8-a2b8-4fb4e6f23be9.png" 
               alt="YouTube"
               href="#"
+              className="order-first"
             />
           </div>
+        </div>
+
+        {/* Tea Package Image - Moved from top to bottom for mobile */}
+        <div className="flex-1 flex justify-center items-center order-2 md:order-1">
+          <img
+            src="/lovable-uploads/9a3c665d-5c2e-4f8c-8414-605fe9bf5709.png"
+            alt="Kotagala Tea Package"
+            className="w-full max-w-md object-contain"
+            style={{ maxHeight: "70vh" }}
+          />
         </div>
       </div>
     </div>
