@@ -3,11 +3,12 @@ import ActionButton from "@/components/ActionButton";
 import ProductCard from "@/components/ProductCard";
 import { Download, Music, Youtube } from "lucide-react";
 import CustomButton from "@/components/CustomButton";
+
 const Index = () => {
   return <div className="min-h-screen relative flex flex-col overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full bg-cover bg-center -z-10" style={{
-      backgroundImage: `url('/lovable-uploads/f2178032-ae50-47e4-8ac0-f13b8d42608d.png')`
+      backgroundImage: `url('/lovable-uploads/58753af4-3908-40ba-a590-01607a969f26.png')`
     }}></div>
 
       {/* Content Container */}
