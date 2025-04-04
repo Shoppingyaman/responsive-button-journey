@@ -1,9 +1,7 @@
-
 import ActionButton from "@/components/ActionButton";
 import ProductCard from "@/components/ProductCard";
 import { Download, Music, Youtube } from "lucide-react";
 import CustomButton from "@/components/CustomButton";
-
 const Index = () => {
   return <div className="min-h-screen relative flex flex-col overflow-hidden">
       {/* Background Image */}
@@ -15,9 +13,9 @@ const Index = () => {
       <div className="flex-1 flex flex-col md:flex-row items-center justify-center p-6 md:p-12 gap-8 max-w-7xl mx-auto w-full z-10">
         {/* Tea Package Image */}
         <div className="flex-1 flex justify-center items-center">
-          <img alt="Kotagala Tea Package" className="w-full max-w-lg object-contain" style={{
+          <img alt="Kotagala Tea Package" style={{
           maxHeight: "80vh"
-        }} src="/lovable-uploads/48f883dc-9c10-4905-aa22-49364da25302.png" />
+        }} src="/lovable-uploads/48f883dc-9c10-4905-aa22-49364da25302.png" className="w-full max-w-lg object-fill" />
         </div>
 
         {/* Right Side Content */}
