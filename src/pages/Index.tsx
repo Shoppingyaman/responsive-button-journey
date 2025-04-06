@@ -1,8 +1,22 @@
+
 import ActionButton from "@/components/ActionButton";
 import ProductCard from "@/components/ProductCard";
 import { Download, Music, Youtube } from "lucide-react";
 import CustomButton from "@/components/CustomButton";
+import { useEffect, useState } from "react";
+
 const Index = () => {
+  const [steam, setSteam] = useState(false);
+  
+  // Toggle steam effect every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSteam(prev => !prev);
+    }, 3000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   return <div className="min-h-screen relative flex flex-col overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full bg-cover bg-center -z-10" style={{
@@ -11,11 +25,18 @@ const Index = () => {
 
       {/* Content Container */}
       <div className="flex-1 flex flex-col md:flex-row items-center justify-center p-6 md:p-12 gap-8 max-w-7xl mx-auto w-full z-10">
-        {/* Tea Package Image */}
-        <div className="flex-1 flex justify-center items-center">
+        {/* Tea Package Image with Steam Animation */}
+        <div className="flex-1 flex justify-center items-center relative">
           <img alt="Kotagala Tea Package" style={{
-          maxHeight: "80vh"
-        }} src="/lovable-uploads/48f883dc-9c10-4905-aa22-49364da25302.png" className="w-full max-w-lg object-fill" />
+            maxHeight: "80vh"
+          }} src="/lovable-uploads/48f883dc-9c10-4905-aa22-49364da25302.png" className="w-full max-w-lg object-fill relative z-10" />
+          
+          {/* Steam animation elements */}
+          <div className={`absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-5 z-20 transition-opacity duration-1000 ${steam ? 'opacity-80' : 'opacity-0'}`}>
+            <div className="steam-particle w-2 h-10 bg-white rounded-full opacity-60 animate-steam-1"></div>
+            <div className="steam-particle w-2 h-8 bg-white rounded-full opacity-50 animate-steam-2 ml-3 mt-1"></div>
+            <div className="steam-particle w-2 h-12 bg-white rounded-full opacity-70 animate-steam-3 ml-6"></div>
+          </div>
         </div>
 
         {/* Right Side Content */}
@@ -27,18 +48,12 @@ const Index = () => {
             </div>
           </ProductCard>
 
-          {/* Custom Buttons */}
+          {/* Custom Buttons - Only showing 2nd and 4th buttons */}
           <div className="flex flex-col gap-4 w-full max-w-md">
-            {/* More Info Button */}
-            <CustomButton imgSrc="/lovable-uploads/80de75c3-b6eb-4276-b452-1140139508a7.png" alt="කව් අහන්න" href="#" />
-            
-            {/* Download Button */}
+            {/* Download Button (2nd) */}
             <CustomButton imgSrc="/lovable-uploads/4c76103f-c923-4ea8-a3c9-02b700dd3b4b.png" alt="Download කරගන්න" href="#" />
             
-            {/* Spotify Button */}
-            <CustomButton imgSrc="/lovable-uploads/c2bb940b-045b-49f3-af8c-cdaf833c19a3.png" alt="Spotify" href="#" />
-            
-            {/* YouTube Button - Updated with new image */}
+            {/* YouTube Button (4th) */}
             <CustomButton imgSrc="/lovable-uploads/bc4d241b-1e8a-4f22-99a7-9a4da38dd8f7.png" alt="YouTube" href="#" />
           </div>
         </div>

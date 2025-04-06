@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,46 @@ export default {
 			}
 		},
 		extend: {
+			keyframes: {
+				'accordion-down': {
+					from: {
+						height: '0'
+					},
+					to: {
+						height: 'var(--radix-accordion-content-height)'
+					}
+				},
+				'accordion-up': {
+					from: {
+						height: 'var(--radix-accordion-content-height)'
+					},
+					to: {
+						height: '0'
+					}
+				},
+				'steam-rise-1': {
+					'0%': { transform: 'translateY(0) translateX(0) scale(0.5)', opacity: '0.7' },
+					'50%': { transform: 'translateY(-15px) translateX(-5px) scale(1)', opacity: '0.5' },
+					'100%': { transform: 'translateY(-30px) translateX(-10px) scale(1.5)', opacity: '0' }
+				},
+				'steam-rise-2': {
+					'0%': { transform: 'translateY(0) translateX(0) scale(0.5)', opacity: '0.7' },
+					'50%': { transform: 'translateY(-20px) translateX(5px) scale(1)', opacity: '0.5' },
+					'100%': { transform: 'translateY(-40px) translateX(10px) scale(1.5)', opacity: '0' }
+				},
+				'steam-rise-3': {
+					'0%': { transform: 'translateY(0) translateX(0) scale(0.5)', opacity: '0.7' },
+					'50%': { transform: 'translateY(-25px) translateX(0px) scale(1)', opacity: '0.5' },
+					'100%': { transform: 'translateY(-50px) translateX(0px) scale(1.5)', opacity: '0' }
+				}
+			},
+			animation: {
+				'accordion-down': 'accordion-down 0.2s ease-out',
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'steam-1': 'steam-rise-1 3s ease-out infinite',
+				'steam-2': 'steam-rise-2 3.2s ease-out infinite',
+				'steam-3': 'steam-rise-3 2.8s ease-out infinite'
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -67,28 +108,6 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
-			},
-			keyframes: {
-				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
-				},
-				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
-			},
-			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
 			}
 		}
 	},
