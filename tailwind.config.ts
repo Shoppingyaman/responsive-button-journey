@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -37,27 +36,33 @@ export default {
 					}
 				},
 				'steam-rise-1': {
-					'0%': { transform: 'translateY(0) translateX(0) scale(0.5)', opacity: '0.7' },
-					'50%': { transform: 'translateY(-15px) translateX(-5px) scale(1)', opacity: '0.5' },
-					'100%': { transform: 'translateY(-30px) translateX(-10px) scale(1.5)', opacity: '0' }
+					'0%': { transform: 'translateY(0) translateX(0) scale(0.5) rotate(-5deg)', opacity: '0.7' },
+					'25%': { transform: 'translateY(-10px) translateX(-3px) scale(0.8) rotate(-2deg)', opacity: '0.8' },
+					'50%': { transform: 'translateY(-25px) translateX(-5px) scale(1) rotate(0deg)', opacity: '0.6' },
+					'75%': { transform: 'translateY(-40px) translateX(-7px) scale(1.2) rotate(2deg)', opacity: '0.3' },
+					'100%': { transform: 'translateY(-60px) translateX(-10px) scale(1.5) rotate(5deg)', opacity: '0' }
 				},
 				'steam-rise-2': {
-					'0%': { transform: 'translateY(0) translateX(0) scale(0.5)', opacity: '0.7' },
-					'50%': { transform: 'translateY(-20px) translateX(5px) scale(1)', opacity: '0.5' },
-					'100%': { transform: 'translateY(-40px) translateX(10px) scale(1.5)', opacity: '0' }
+					'0%': { transform: 'translateY(0) translateX(0) scale(0.5) rotate(5deg)', opacity: '0.7' },
+					'25%': { transform: 'translateY(-15px) translateX(3px) scale(0.8) rotate(2deg)', opacity: '0.8' },
+					'50%': { transform: 'translateY(-30px) translateX(5px) scale(1) rotate(0deg)', opacity: '0.6' },
+					'75%': { transform: 'translateY(-45px) translateX(7px) scale(1.2) rotate(-2deg)', opacity: '0.3' },
+					'100%': { transform: 'translateY(-70px) translateX(10px) scale(1.5) rotate(-5deg)', opacity: '0' }
 				},
 				'steam-rise-3': {
-					'0%': { transform: 'translateY(0) translateX(0) scale(0.5)', opacity: '0.7' },
-					'50%': { transform: 'translateY(-25px) translateX(0px) scale(1)', opacity: '0.5' },
-					'100%': { transform: 'translateY(-50px) translateX(0px) scale(1.5)', opacity: '0' }
+					'0%': { transform: 'translateY(0) translateX(0) scale(0.5) rotate(0deg)', opacity: '0.7' },
+					'25%': { transform: 'translateY(-20px) translateX(0px) scale(0.8) rotate(2deg)', opacity: '0.8' },
+					'50%': { transform: 'translateY(-40px) translateX(0px) scale(1) rotate(-2deg)', opacity: '0.6' },
+					'75%': { transform: 'translateY(-60px) translateX(0px) scale(1.2) rotate(0deg)', opacity: '0.3' },
+					'100%': { transform: 'translateY(-80px) translateX(0px) scale(1.5) rotate(2deg)', opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'steam-1': 'steam-rise-1 3s ease-out infinite',
-				'steam-2': 'steam-rise-2 3.2s ease-out infinite',
-				'steam-3': 'steam-rise-3 2.8s ease-out infinite'
+				'steam-1': 'steam-rise-1 4s ease-out infinite',
+				'steam-2': 'steam-rise-2 4.5s ease-out infinite',
+				'steam-3': 'steam-rise-3 3.8s ease-out infinite'
 			},
 			colors: {
 				border: 'hsl(var(--border))',
