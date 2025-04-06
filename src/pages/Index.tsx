@@ -44,16 +44,16 @@ const Index = () => {
         </div>
 
         {/* Right Side Content - Centered on mobile */}
-        <div className={`flex-1 flex flex-col gap-6 ${isMobile ? 'items-center w-full' : 'items-start'}`}>
+        <div className={`flex-1 flex flex-col gap-6 ${isMobile ? 'items-center text-center w-full mx-auto' : 'items-start'}`}>
           {/* Product Info Card */}
-          <ProductCard className={`${isMobile ? 'w-full' : 'w-full max-w-md'}`}>
+          <ProductCard className={`${isMobile ? 'w-full max-w-sm mx-auto' : 'w-full max-w-md'}`}>
             <div className="text-center">
               <img src="/lovable-uploads/94239bce-1841-412b-ae85-8867cbc8ece4.png" alt="Kotagala Tea Logo" className="mx-auto mb-4 max-w-[250px]" />
             </div>
           </ProductCard>
 
           {/* Custom Buttons - Only showing 2nd and 4th buttons */}
-          <div className={`flex flex-col gap-4 ${isMobile ? 'w-full' : 'w-full max-w-md'}`}>
+          <div className={`flex flex-col gap-4 ${isMobile ? 'w-full max-w-sm mx-auto' : 'w-full max-w-md'}`}>
             {/* Download Button (2nd) */}
             <CustomButton imgSrc="/lovable-uploads/4c76103f-c923-4ea8-a3c9-02b700dd3b4b.png" alt="Download කරගන්න" href="#" />
             
