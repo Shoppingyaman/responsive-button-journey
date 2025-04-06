@@ -1,8 +1,13 @@
+
 import ActionButton from "@/components/ActionButton";
 import ProductCard from "@/components/ProductCard";
 import { Download, Music, Youtube } from "lucide-react";
 import CustomButton from "@/components/CustomButton";
+import { useIsMobile } from "@/hooks/use-mobile";
+
 const Index = () => {
+  const isMobile = useIsMobile();
+
   return <div className="min-h-screen relative flex flex-col overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full bg-cover bg-center -z-10" style={{
@@ -27,19 +32,19 @@ const Index = () => {
             </div>
           </ProductCard>
 
-          {/* Custom Buttons */}
-          <div className="flex flex-col gap-4 w-full max-w-md">
+          {/* Custom Buttons - Temporarily hidden */}
+          <div className={`flex flex-col gap-4 w-full ${isMobile ? 'max-w-xs' : 'max-w-md'}`}>
             {/* More Info Button */}
-            <CustomButton imgSrc="/lovable-uploads/80de75c3-b6eb-4276-b452-1140139508a7.png" alt="කව් අහන්න" href="#" />
+            <CustomButton imgSrc="/lovable-uploads/80de75c3-b6eb-4276-b452-1140139508a7.png" alt="කව් අහන්න" href="#" hidden={true} />
             
             {/* Download Button */}
-            <CustomButton imgSrc="/lovable-uploads/4c76103f-c923-4ea8-a3c9-02b700dd3b4b.png" alt="Download කරගන්න" href="#" />
+            <CustomButton imgSrc="/lovable-uploads/4c76103f-c923-4ea8-a3c9-02b700dd3b4b.png" alt="Download කරගන්න" href="#" hidden={true} />
             
             {/* Spotify Button */}
-            <CustomButton imgSrc="/lovable-uploads/c2bb940b-045b-49f3-af8c-cdaf833c19a3.png" alt="Spotify" href="#" />
+            <CustomButton imgSrc="/lovable-uploads/c2bb940b-045b-49f3-af8c-cdaf833c19a3.png" alt="Spotify" href="#" hidden={true} />
             
-            {/* YouTube Button - Updated with new image */}
-            <CustomButton imgSrc="/lovable-uploads/bc4d241b-1e8a-4f22-99a7-9a4da38dd8f7.png" alt="YouTube" href="#" />
+            {/* YouTube Button */}
+            <CustomButton imgSrc="/lovable-uploads/bc4d241b-1e8a-4f22-99a7-9a4da38dd8f7.png" alt="YouTube" href="#" hidden={true} />
           </div>
         </div>
       </div>
