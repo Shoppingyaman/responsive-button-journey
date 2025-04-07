@@ -33,13 +33,9 @@ const Index = () => {
             maxHeight: "80vh"
           }} src="/lovable-uploads/48f883dc-9c10-4905-aa22-49364da25302.png" className="w-full max-w-lg object-contain relative z-10" />
           
-          {/* Enhanced steam animation elements */}
-          <div className={`absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-10 z-20 transition-opacity duration-1000 ${steam ? 'opacity-80' : 'opacity-0'}`}>
-            <div className="steam-particle w-3 h-16 bg-white rounded-full opacity-60 animate-steam-1"></div>
-            <div className="steam-particle w-2 h-14 bg-white rounded-full opacity-50 animate-steam-2 ml-4 mt-2"></div>
-            <div className="steam-particle w-3 h-18 bg-white rounded-full opacity-70 animate-steam-3 ml-8 mt-1"></div>
-            <div className="steam-particle w-2 h-12 bg-white rounded-full opacity-60 animate-steam-1 ml-12 mt-3"></div>
-            <div className="steam-particle w-2 h-10 bg-white rounded-full opacity-50 animate-steam-2 ml-6 mt-2"></div>
+          {/* New custom steam animation */}
+          <div className={`absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-10 z-20 transition-opacity duration-1000 ${steam ? 'opacity-100' : 'opacity-0'}`}>
+            <div className="steam"></div>
           </div>
         </div>
 

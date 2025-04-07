@@ -90,3 +90,89 @@
     min-height: 100vh;
   }
 }
+
+/* Custom Steam Animation */
+.steam {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 44;
+  opacity: 0.8;
+  display: flex;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
+
+.steam::before {
+  content: "";
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  -webkit-animation: fadeOutUp linear 5s;
+  animation: fadeOutUp linear 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  clip-path: polygon(
+    33% 40%,
+    52% 12%,
+    84% 29%,
+    62% 65%,
+    54% 89%,
+    73% 92%,
+    73% 74%,
+    53% 63%,
+    77% 57%,
+    95% 31%,
+    71% 3%,
+    34% 47%,
+    50% 37%,
+    69% 39%,
+    69% 29%,
+    76% 35%,
+    61% 6%,
+    64% 47%,
+    91% 9%,
+    51% 5%,
+    84% 61%,
+    91% 49%,
+    35% 19%,
+    40% 10%,
+    57% 41%,
+    57% 54%,
+    92% 19%
+  );
+  border-radius: 60% 50%;
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 0.6;
+    transform: translate3d(0, -20%, 0);
+  }
+  20% {
+    opacity: 0.3;
+    transform: translate3d(0, -40%, 0);
+  }
+  40% {
+    opacity: 0.4;
+    transform: translate3d(0, -60%, 0);
+  }
+  60% {
+    opacity: 0.3;
+    transform: translate3d(0, -80%, 0);
+  }
+  80% {
+    opacity: 0.4;
+    transform: translate3d(0, -90%, 0);
+  }
+  90% {
+    opacity: 0.2;
+    transform: translate3d(0, -95%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
