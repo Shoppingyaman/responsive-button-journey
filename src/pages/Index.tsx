@@ -33,8 +33,8 @@ const Index = () => {
             maxHeight: "80vh"
           }} src="/lovable-uploads/48f883dc-9c10-4905-aa22-49364da25302.png" className="w-full max-w-lg object-contain relative z-10" />
           
-          {/* New custom steam animation */}
-          <div className={`absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-10 z-20 transition-opacity duration-1000 ${steam ? 'opacity-100' : 'opacity-0'}`}>
+          {/* Repositioned custom steam animation to be directly on top of the cup */}
+          <div className={`absolute top-[35%] left-[50%] transform -translate-x-1/2 -translate-y-full z-20 transition-opacity duration-1000 ${steam ? 'opacity-100' : 'opacity-0'}`}>
             <div className="steam"></div>
           </div>
         </div>
