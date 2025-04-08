@@ -48,8 +48,11 @@ const Index = () => {
             </div>
           </ProductCard>
 
-          {/* Custom Buttons - Only showing 2nd and 4th buttons */}
+          {/* Custom Buttons - Now showing 3 buttons */}
           <div className={`flex flex-col gap-4 ${isMobile ? 'w-full max-w-sm mx-auto' : 'w-full max-w-md'}`}>
+            {/* First Button */}
+            <CustomButton imgSrc="/lovable-uploads/9a3c665d-5c2e-4f8c-8414-605fe9bf5709.png" alt="First Button" href="#" />
+            
             {/* Download Button (2nd) */}
             <CustomButton imgSrc="/lovable-uploads/4c76103f-c923-4ea8-a3c9-02b700dd3b4b.png" alt="Download කරගන්න" href="#" />
             
