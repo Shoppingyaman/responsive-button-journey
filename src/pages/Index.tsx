@@ -48,18 +48,15 @@ const Index = () => {
             </div>
           </ProductCard>
 
-          {/* Custom Buttons - Adding Spotify button */}
+          {/* Custom Buttons - Now showing 3 buttons */}
           <div className={`flex flex-col gap-4 ${isMobile ? 'w-full max-w-sm mx-auto' : 'w-full max-w-md'}`}>
-            {/* First button */}
+            {/* First Button */}
             <CustomButton imgSrc="/lovable-uploads/9a3c665d-5c2e-4f8c-8414-605fe9bf5709.png" alt="First Button" href="#" />
             
-            {/* Download Button */}
+            {/* Download Button (2nd) */}
             <CustomButton imgSrc="/lovable-uploads/4c76103f-c923-4ea8-a3c9-02b700dd3b4b.png" alt="Download කරගන්න" href="#" />
             
-            {/* Spotify Button */}
-            <CustomButton imgSrc="/lovable-uploads/be8eed30-a0f0-4dae-a8b7-38d627b3569e.png" alt="Spotify" href="https://open.spotify.com" />
-            
-            {/* YouTube Button */}
+            {/* YouTube Button (4th) */}
             <CustomButton imgSrc="/lovable-uploads/bc4d241b-1e8a-4f22-99a7-9a4da38dd8f7.png" alt="YouTube" href="#" />
           </div>
         </div>
